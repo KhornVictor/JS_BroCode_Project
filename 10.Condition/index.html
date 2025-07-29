@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condition</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/409239094a.js" crossorigin="anonymous"></script>
+    <style>
+        main {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        main > div {
+            width: 400px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 20px;
+            padding: 10px;
+            justify-content: center;
+            background-color: rgb(0, 110, 255);
+        }
+
+        main > div > div:nth-child(2) {
+            width: 100%;
+            height: 78%;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background-color: rgb(0, 43, 74);
+        }
+
+        main > div > div:nth-child(2) > form {
+            width: 100%;
+            display: flex;
+            flex-direction: row;    
+            justify-content: center;
+            align-items: center;
+        }
+
+        main > div > div:nth-child(2) > form > input{
+            width: 80%;
+            height: 50px;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 10px 0px 0px 10px;
+            border: none;
+        }
+
+
+        main > div > div:nth-child(2) > form > button {
+            width: 20%;
+            height: 50px;
+            display: flex;  
+            align-items: center;
+            justify-content: center;
+            border-radius: 0px 10px 10px 0px;
+            background-color: rgb(0, 149, 255);
+            color: white;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+        }
+        main > div > div:nth-child(2) > form > button:hover {
+            background-color: rgb(0, 149, 255);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        main > div > div:nth-child(2) > form > button:hover ~ button{
+            background-color: rgb(0, 149, 255);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        main > div > div:nth-child(2) > form > button:active{
+            background-color: rgb(0, 130, 223);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        main > div > div:last-child > p {
+            width: 100%;
+            height: 200px;
+            margin: 0;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(63, 63, 63);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        main > div > div:last-child {
+            width: 100%;
+            height: 20%;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+        }
+
+        main > div > div:first-child {
+            width: 100%;
+            height: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main > div > div:first-child > h1 {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            margin: 0px;
+            padding: 20px   ;
+        }
+        </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html">
+            <button>
+                <i class="fa-solid fa-house"></i>
+                <div>Javascript</div>
+            </button>
+        </a>
+    </nav>
+    
+    <header>
+        <h1>Welcome to the Age Checker</h1>
+        <p>This application checks if a person is an adult or a minor based on their age.</p><br>
+    </header>
+    <main>
+        <div>
+            <div>
+                <h1 id="greeting-text"></h1>
+            </div>
+            <div>
+                <form action="">
+                    <input type="number" placeholder="Enter age" id="input-number">
+                    <button type="button" id="check-button">Check</button>
+                </form>
+            </div>
+            <div>
+                <p id="result-text">Nothing to display</p>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </main>
+</body>
+</html>

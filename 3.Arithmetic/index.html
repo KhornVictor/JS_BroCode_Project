@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        main > div{
+            width: 400px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            align-items: center;
+            flex-direction: column;
+            padding: 10px 20px 10px 20px;
+            border-radius: 10px;
+            background: linear-gradient(to bottom right, rgb(195, 159, 0), rgb(255, 196, 0));
+        }
+
+        main > div > div {
+            width: 100%;
+            height: 50px;
+            color: white;
+            background-color: #ffffff;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        main > div > div:hover {
+            background-color: #d9d9d9;
+            scale: 1.05;
+            transition: 0.3s;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        main > div > div > P{
+            color: rgb(217, 177, 0);
+            font-weight: bold;
+        }
+        
+    </style>
+    <script src="https://kit.fontawesome.com/409239094a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html">
+            <button>
+                <i class="fa-solid fa-house"></i>
+                <div>Javascript</div>
+            </button>
+        </a>
+    </nav>
+
+    <header>
+        <h1>Arithmetic Operator</h1>
+        <p>This section covers arithmetic operators in JavaScript.</p>
+    </header>
+    <main>
+        <div>
+            <div>
+                <p id="addition"></p>
+            </div>
+            <div>
+                <p id="subtraction"></p>
+            </div>
+            <div>
+                <p id="multiplication"></p>
+            </div>
+            <div>
+                <p id="division"></p>
+            </div>
+            <script src="index.js"></script>
+
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Conversion</title>
+    <link rel="stylesheet" href="../style.css">
+     <script src="https://kit.fontawesome.com/409239094a.js" crossorigin="anonymous"></script>
+     <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        main{
+            background-color: #218838;
+        }
+
+        main > div > h1{
+            color: #218838;
+            margin-top: 0px;
+            margin-bottom: 20px;
+        }
+
+        main > div {
+            text-align: center;
+            margin: 20px auto;
+            max-width: 400px;
+            background-color: #f8f9fa;
+            padding: 30px 20px 30px 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.295);
+        }
+        main > div > input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border-radius: 5px;
+            color: #767676;
+            border: 1px solid #ccc;
+        }
+        main > div > button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        main > div > button:hover {
+            background-color: #218838;
+        }
+
+        main > div > #result {
+            width: 100%;
+            height: 50px;
+            margin-top: 20px;
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: start;
+            font-size: 16px;
+            align-items: center;
+            color: #767676;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.192);
+            background-color: #ffffff;
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+        }
+
+        main > div > #result:hover {
+            border: 2px solid #626262;
+        }
+
+        
+
+     </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html">
+            <button>
+                <i class="fa-solid fa-house"></i>
+                <div>Javascript</div>
+            </button>
+        </a>
+    </nav>
+
+    <header>
+        <h1>Welcome to the Const Page</h1>
+        <p>This page serves as an introduction to const in JavaScript.</p><br>
+    </header>
+
+    <main>
+        <div>
+            <h1>Calculate Circumference</h1>
+            <p>Enter the radius of the circle</p>
+            <input type="number" id="radius" placeholder="Radius">
+            <div id="result"><p>Circumference: </p></div>
+            <button id="calculate">Calculate</button>
+        </div>
+        <script src="./index.js"></script>
+    </main>
+</body>
+</html>

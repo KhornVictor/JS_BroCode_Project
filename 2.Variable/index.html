@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        main > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main > div > div {
+            width: 200px;
+            height: auto;
+            color: white;
+            background-color: #575757;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        main > div > div > div:first-child {
+            width: 100%;
+            justify-self: center;
+            height: 150px;
+            background-color: #f30000;
+            border-radius: 10px;
+            background-image: url(../image/Gay.png);
+            background-size: cover;
+            background-position: center;
+        }
+
+        main > div > div > div:nth-child(2) {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+        main > div > div > div:nth-child(2) p {
+            margin: 10px 0;
+        }
+        main > div > div > div:nth-child(3) {
+            width: 100%;
+            background-color: rgb(0, 132, 255);
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main > div > div > div:nth-child(3):hover {
+            background-color: #005df3;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/409239094a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html">
+            <button>
+                <i class="fa-solid fa-house"></i>
+                <div>Javascript</div>
+            </button>
+        </a>
+    </nav>
+    <header>
+        <h1>Variables</h1>
+        <p>Learn about variables in JavaScript, their types, and how to use them effectively.</p>
+        <p><strong>Key Topics:</strong></p>
+        <p>Declaration let x;</p>
+        <p>Assignment x = 10;</p>
+    </header>
+    <main>
+        <div>
+            <div>
+                <div></div>
+                <div>
+                    <strong>
+                        <p id="name"></p>
+                        <p id="age"></p>
+                        <p id="price"></p>
+                        <p id="isAvailable"></p>
+                    </strong>
+                </div>
+                <div>
+                    <strong>
+                        <p>Get</p>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="./index.js"></script>
+
+    <footer>
+        <p>&copy; 2025 Khorn Victor. All rights reserved.</p>
+        <p>Follow me on <a target="_blank" href="https://github.com/KhornVictor"><i class="fa-brands fa-github"></i></a></p>
+    </footer>
+    
+</body>
+</html>
