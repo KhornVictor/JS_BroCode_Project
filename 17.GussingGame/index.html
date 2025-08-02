@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/409239094a.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body{
+            font-family: "Alfa Slab One", serif;
+            width: 100%;
+            height: 100vh;
+            background-image: url("image/GameBackground.gif");
+            background-size: cover;
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+        }
+
+        main{
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .main-navigation{
+            width: 100%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(to right, #001745, rgb(0, 95, 191));
+            padding: 10px 10px 10px 20px;
+            color: rgb(255, 255, 255);
+            font-size: 24px;
+        }
+
+        .main-navigation > div:nth-child(2){
+            width: auto;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #001745;
+            padding: 0px 10px;
+            border-radius: 50px;
+        }
+
+        .main-navigation > div:nth-child(2) > div:nth-child(1){
+            display: flex;
+            align-items: center;
+            justify-content: start; 
+            margin-right: 20px;
+        }
+
+        .main-navigation > div:nth-child(2) > div:nth-child(1) > img{
+            width: 20px;
+            height: 20px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-right: 5px;
+        }
+
+        .main-navigation > div:nth-child(2) > button{
+            background: linear-gradient(to right, #005e09, #00880e);
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            border-radius: 50%;
+            border: none;
+        }
+
+        .main-navigation > div:nth-child(2) > button > i{
+            color: #ffffff;
+            font-size: 20px;
+        }
+
+        .main-navigation > div:nth-child(2) > button:hover{
+            transition: 0.3s;
+            scale: 1.1;
+        }
+
+        .main-game-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-game-container > div{
+            width: 500px;
+            height: 100%;
+            display: flex;
+            padding-left: 50px;
+            padding-right: 50px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .game-container{
+            width: 500px;
+            height: auto;
+             backdrop-filter: blur(10px); 
+             background-color: #ffffff11;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px rgb(0, 0, 0);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            top: -100px;
+        }
+
+        .header-game{
+            width: 100%;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .header-game > h1{
+            font-size: 30px;
+            color: #ffffff;
+            font-weight: lighter;
+            margin: 0px;
+        }
+
+        .header-game > p{
+            font-size: 16px;
+            margin: 5px 0px;
+            font-family: "Raleway", sans-serif;
+        }
+        #container{
+            width: 500px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        #container:hover{
+            transition: 0.3s;
+        }
+        #container > div:first-child{
+            width: 100%;
+            padding: 20px 0px 20px 0px;
+            text-align: center;
+        }
+        #container > div:first-child > h1{
+            font-family: "VT323", monospace;
+            color: rgb(255, 255, 255);
+            font-size: 100px;
+            margin: 0px;
+        }
+        #container > div:nth-child(2){
+            width: 100%;
+            padding: 20px 0px 20px 0px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        #container > div:nth-child(2) > ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0px;
+            padding: 0px 0px 0px 0px;
+        }
+
+        #container > div:nth-child(2) > ul > li{
+            height: 100%;
+            margin: 0px 10px 0px 10px;
+        }
+
+        #container > div:nth-child(2) > ul > li > button{
+            padding: 20px;
+            background: linear-gradient(to right, #003cb3, #004eeb);
+            font-size: 16px;
+            color: aliceblue;   
+            border: none;
+            box-shadow: 0px 0px 10px rgba(181, 65, 65, 0.1);
+            border-radius: 10px;
+        }
+
+        #container > div:nth-child(2) > ul > li:nth-child(2) > button{
+            background: linear-gradient(to right, #d4af37, #ffee00);
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        #container > div:nth-child(2) > ul > li:nth-child(2) > button:hover{
+            background-color: rgb(204, 160, 0);
+            transition: 0.3s;
+        }
+
+        #container > div:nth-child(2) > ul > li > button:hover{
+            background-color: rgb(0, 88, 170);
+            transition: 0.3s;
+        }
+
+        #container > div:nth-child(2) > ul > li > button:active{
+            background-color: rgb(0, 49, 95);
+            border: 1px black solid;
+            scale: 1.02;
+            transition: 0.3s;
+        }
+
+        #container > div:last-child{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+
+        #container > div:last-child > div{
+            width: 80%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            background-color: white;
+            align-items: center;
+            font-size: 24px;
+            border: 2px solid #000000;
+        }
+
+        #container > div:last-child > div > img{
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+
+        #decrease-coins, #increase-coins{
+            width: 10%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #decrease-coins{
+            background: linear-gradient(to right, #003cb3, #004eeb);
+            color: white;
+            border: none;
+            border-radius: 50px 0px 0px 50px;
+            font-size: 24px;
+        }
+
+        #increase-coins{
+            background: linear-gradient(to right, #003cb3, #004eeb);
+            color: white;
+            border: none;
+            border-radius: 0px 50px 50px 0px;
+            font-size: 24px;
+        }
+
+        #decrease-coins:hover, #increase-coins:hover{
+            background: linear-gradient(to right, #002080, #003cb3);
+            transition: 0.3s;
+        }
+
+        #decrease-coins:active, #increase-coins:active{
+            background: linear-gradient(to right, #00104d, #002080);
+            scale: 1.02;
+            transition: 0.3s;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html">
+            <button>
+                 <i class="fa-solid fa-house"></i>
+                <div>Javascript</div>
+            </button>
+        </a>
+    </nav>
+    
+    <main>
+        <nav class="main-navigation">
+            <div>
+                Gussing Game
+            </div>
+            <div>
+                <div>
+                    <img src="image/Coin.png" alt="">
+                    <p id="coins-display"></p>
+                </div>
+                <button>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div class="main-game-container">
+            <div>
+                <div class="game-container">
+                    <div class="header-game">
+                        <h1>Guessing Game</h1>
+                        <p>Guess the number between 1 and 10</p>
+                    </div>
+                    <div id="container">
+                        <div>
+                            <h1 id="result">1</h1>
+                        </div>
+                        <div>
+                            <ul id="button-list">
+                                <li><button type="button" id="decrease-guessing">DECREASE</button></li>
+                                <li><button type="button" id="bet">BET</button></li>
+                                <li><button type="button" id="increase-guessing">INCREASE</button></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <button id="decrease-coins">-</button>
+                            <div><img src="image/Coin.png" alt=""><p id="coins-bet">0</p></div>
+
+                            <button id="increase-coins">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </main>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/409239094a.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+        main{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 0px 0px 0px;
+            backdrop-filter: blur(5px);
+            background-color: rgba(171, 171, 171, 0.326);
+            font-family: "Bungee", sans-serif;
+        }
+
+        main > button{
+            width: auto;
+            height: 50px;
+            border-radius: 10px;
+            background-color: #007bff;
+            color: white;
+            font-size: 20px;
+            border: 1px solid #939393;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 0 20px 0px 30px;
+            z-index: -1;
+        }
+
+        main > button > i{ 
+            margin-right: 20px;
+            font-size: 24px;
+        }
+
+        main > p{
+            color: rgb(233, 233, 233);
+            font-size: 18px;
+            margin-top: 20px;
+            text-shadow: 0px 0px 5px #353535;
+
+        }
+
+        main > h1{
+            font-size: 48px;
+            color: white;
+            text-align: center;
+            margin: 20px 0;
+            text-shadow: 0px 0px 5px #353535;
+        }   
+        
+        main > button:hover{
+            background-color: #0056b3;
+        }
+
+        main > button:active{
+            box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+            scale: 0.98;
+        }
+
+        main > button > div{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid #353535;
+            background-color: #ffffff;  
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+
+        body{
+            background-image: url(./image/371908020_CONFETTI_400px.gif);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+
+        @keyframes ColorChange{
+            0%{
+                background-color: #ff0000;
+                color: white;
+                transform: rotateZ(0deg);
+                filter: brightness(1);
+            }
+            10%{
+                background-color: #b36e00;
+                color: white;
+                transform: rotateZ(36deg);
+                filter: brightness(1.2);
+            }
+            20%{
+                background-color: #eeff00;
+                color: black;
+                transform: rotateZ(72deg);
+                filter: brightness(1.4);
+            }
+            30%{
+                background-color: #00ff59;
+                color: black;
+                transform: rotateZ(108deg);
+                filter: brightness(1.6);
+            }
+            40%{
+                background-color: #00ffc8;
+                color: black;
+                transform: rotateZ(144deg);
+                filter: brightness(1.8);
+            }
+            50%{
+                background-color: #00a6ff;
+                color: black;
+                transform: rotateZ(180deg);
+                filter: brightness(2);
+            }
+            60%{
+                background-color: #0d00ff;
+                color: white;
+                transform: rotateZ(216deg);
+                filter: brightness(1.8);
+            }
+            70%{
+                background-color: #8c00ff;
+                color: white;
+                transform: rotateZ(252deg);
+                filter: brightness(1.6);
+            }
+            80%{
+                background-color: #ff0084;
+                color: white;
+                transform: rotateZ(288deg);
+                filter: brightness(1.4);
+            }
+            90%{
+                background-color: #ff006a;
+                color: white;
+                transform: rotateZ(324deg);
+                filter: brightness(1.2);
+            }
+            100%{
+                background-color: #ff0000;
+                color: white;
+                transform: rotateZ(360deg);
+                filter: brightness(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html">
+            <button>
+                 <i class="fa-solid fa-house"></i>
+                <div>Javascript</div>
+            </button>
+        </a>
+    </nav>
+    
+    <main>
+        <h1>Welcome to the Function  Example</h1>
+        <button id="click-button">
+            <div></div>
+            <i class="fa-solid fa-hand-point-up"></i>
+            <p>Click Here</p>
+        </button>
+        <p></p>
+        <script src="index.js"></script>
+    </main>
+</body>
+</html>

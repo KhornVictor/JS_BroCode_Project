@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/409239094a.js" crossorigin="anonymous"></script>
+    <style>
+        main {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        main > div {
+            width: 400px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 20px;
+            padding: 20px;
+            justify-content: center;
+            background-color: rgb(229, 229, 229);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        main > div > button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        main > div > button:hover {
+            background-color: #45a049;
+            transform: scale(1.01);
+            transition: 0.3s ease-in-out;
+        }
+
+        main > div > button:active {
+            transform: scale(1);
+        }
+
+        main > div > img {
+            width: 100%;
+            height: 500px;
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html">
+            <button>
+                 <i class="fa-solid fa-house"></i>
+                <div>Javascript</div>
+            </button>
+        </a>
+    </nav>
+    
+    <header>
+        <h1>Welcome to the Switch Case Example</h1>
+    </header>
+    
+    <main>
+        <div>
+            <h2>Switch Case Example</h2>
+            <p id="switch-result">The WEEKND</p>
+            <img src="./image/image6.png" alt="Picture" id="switch-image">
+            <button id="switch-button" type="button"><i class="fa-solid fa-repeat"></i></button>
+        </div>
+        <script src="index.js"></script>
+    </main>
+</body>
+</html>
